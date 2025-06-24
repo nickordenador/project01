@@ -1,1 +1,10 @@
 <h1>Hello World</h1>
+
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<script type="module">
+	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+	createChat({
+		webhookUrl: 'https://calm-panda-25.hooks.n8n.cloud/webhook/aea1dd23-456d-471b-9e3c-24c6c9f4e220/chat'
+	});
+</script>
