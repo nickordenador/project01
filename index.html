@@ -4,7 +4,34 @@
 <script type="module">
 	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
-	createChat({
-		webhookUrl: 'https://calm-panda-25.hooks.n8n.cloud/webhook/aea1dd23-456d-471b-9e3c-24c6c9f4e220/chat'
-	});
+createChat({
+	webhookUrl: 'https://calm-panda-25.hooks.n8n.cloud/webhook/aea1dd23-456d-471b-9e3c-24c6c9f4e220/chat',
+	webhookConfig: {
+		method: 'POST',
+		headers: {}
+	},
+	target: '#n8n-chat',
+	mode: 'window',
+	chatInputKey: 'chatInput',
+	chatSessionKey: 'sessionId',
+	loadPreviousSession: true,
+	metadata: {},
+	showWelcomeScreen: false,
+	defaultLanguage: 'es',
+	initialMessages: [
+		'Hi there! 👋',
+		'My name is Nathan. How can I assist you today?'
+	],
+	i18n: {
+		es: {
+			title: 'Hola! 👋',
+			subtitle: "Bienvenido a la panadería MACHICHIMANÍA.",
+			footer: '',
+			getStarted: 'Nueva conversación',
+			inputPlaceholder: 'Escriba su pregunta...',
+		},
+	},
+});
+
 </script>
+
