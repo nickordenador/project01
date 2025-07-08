@@ -1,11 +1,36 @@
-<h1>Hello World</h1>
+<h1>nickordenador test</h1>
 
 <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 <script type="module">
 	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
-	createChat({
-		webhookUrl: 'https://rniyb-2800-810-5e3-ddc-998b-ba8b-a4b3-9529.a.free.pinggy.link/webhook/aea1dd23-456d-471b-9e3c-24c6c9f4e220/chat'
-	});
-</script>
+createChat({
+	webhookUrl: 'https://5958c6f37683.ngrok-free.app/webhook/aea1dd23-456d-471b-9e3c-24c6c9f4e220/chat',
+	webhookConfig: {
+		method: 'POST',
+		headers: {}
+	},
+	target: '#n8n-chat',
+	mode: 'full',
+	chatInputKey: 'chatInput',
+	chatSessionKey: 'sessionId',
+	loadPreviousSession: true,
+	metadata: {},
+	showWelcomeScreen: false,
+	defaultLanguage: 'es',
+	initialMessages: [
+		'Hola!',
+		'My name is Machichi. Como puedo ayudarte'
+	],
+	i18n: {
+		es: {
+			title: 'Hola!',
+			subtitle: "Bienvenido a la panadería MACHICHIMANÍA.",
+			footer: '',
+			getStarted: 'Nueva conversación',
+			inputPlaceholder: 'Escriba su pregunta...',
+		},
+	},
+});
 
+</script>
