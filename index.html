@@ -1,5 +1,3 @@
-<h1>nickordenador test</h1>
-
 <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 <script type="module">
 	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
@@ -11,7 +9,7 @@ createChat({
 		headers: {}
 	},
 	target: '#n8n-chat',
-	mode: 'fullscreen',
+	mode: 'window',
 	chatInputKey: 'chatInput',
 	chatSessionKey: 'sessionId',
 	loadPreviousSession: true,
@@ -20,12 +18,12 @@ createChat({
 	defaultLanguage: 'es',
 	initialMessages: [
 		'Hola!',
-		'Mi nombre e s Machichi. Como puedo ayudarte?'
+		'Mi nombre es Machichi. Como puedo ayudarte?'
 	],
 	i18n: {
 		es: {
 			title: 'Hola!',
-			subtitle: "Bienvenido a la panadería MACHICHIMANÍA.",
+			subtitle: "Bienvenido a la panadería MachichiManía.",
 			footer: '',
 			getStarted: 'Nueva conversación',
 			inputPlaceholder: 'Escriba su pregunta...',
